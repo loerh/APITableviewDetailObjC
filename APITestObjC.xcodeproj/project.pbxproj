@@ -14,6 +14,9 @@
 		6440C439205186830083D2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6440C438205186830083D2B6 /* Assets.xcassets */; };
 		6440C43C205186830083D2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6440C43A205186830083D2B6 /* LaunchScreen.storyboard */; };
 		6440C43F205186830083D2B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6440C43E205186830083D2B6 /* main.m */; };
+		6440C44820518F440083D2B6 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 6440C44720518F440083D2B6 /* Client.m */; };
+		6440C44C2051A3EC0083D2B6 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6440C44B2051A3EC0083D2B6 /* APIManager.m */; };
+		6440C4502051E9950083D2B6 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6440C44F2051E9950083D2B6 /* DatabaseManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		6440C43B205186830083D2B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6440C43D205186830083D2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6440C43E205186830083D2B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6440C44620518F440083D2B6 /* Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		6440C44720518F440083D2B6 /* Client.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
+		6440C44A2051A3EC0083D2B6 /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		6440C44B2051A3EC0083D2B6 /* APIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		6440C44E2051E9950083D2B6 /* DatabaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		6440C44F2051E9950083D2B6 /* DatabaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,9 @@
 		6440C42B205186830083D2B6 /* APITestObjC */ = {
 			isa = PBXGroup;
 			children = (
+				6440C44D2051D4A70083D2B6 /* DB */,
+				6440C4492051A3E10083D2B6 /* API */,
+				6440C44520518F360083D2B6 /* Model */,
 				6440C42C205186830083D2B6 /* AppDelegate.h */,
 				6440C42D205186830083D2B6 /* AppDelegate.m */,
 				6440C42F205186830083D2B6 /* ViewController.h */,
@@ -72,6 +84,33 @@
 				6440C435205186830083D2B6 /* APITestObjC.xcdatamodeld */,
 			);
 			path = APITestObjC;
+			sourceTree = "<group>";
+		};
+		6440C44520518F360083D2B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6440C44620518F440083D2B6 /* Client.h */,
+				6440C44720518F440083D2B6 /* Client.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6440C4492051A3E10083D2B6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6440C44A2051A3EC0083D2B6 /* APIManager.h */,
+				6440C44B2051A3EC0083D2B6 /* APIManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6440C44D2051D4A70083D2B6 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				6440C44E2051E9950083D2B6 /* DatabaseManager.h */,
+				6440C44F2051E9950083D2B6 /* DatabaseManager.m */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +185,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6440C431205186830083D2B6 /* ViewController.m in Sources */,
+				6440C4502051E9950083D2B6 /* DatabaseManager.m in Sources */,
 				6440C437205186830083D2B6 /* APITestObjC.xcdatamodeld in Sources */,
+				6440C44C2051A3EC0083D2B6 /* APIManager.m in Sources */,
 				6440C43F205186830083D2B6 /* main.m in Sources */,
 				6440C42E205186830083D2B6 /* AppDelegate.m in Sources */,
+				6440C44820518F440083D2B6 /* Client.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
