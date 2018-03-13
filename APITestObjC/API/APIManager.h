@@ -7,19 +7,42 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Client.h"
+#import "MusicAlbum.h"
+#import "MusicTrack.h"
 
+/**
+ The API Manager deals with all API calls, parses JSON and returns proper objects based on models.
+ */
 @interface APIManager : NSObject
 
+/// The shared instance of the API Manager
 +(instancetype _Nonnull ) sharedInstance;
 
-typedef void (^requestCompletionBlock) (NSData*_Nullable);
+/// A completion block for a generic API request
+typedef void (^RequestCompletionBlock) (NSData* _Nullable);
 
-typedef void (^requestClientsBlock) (NSMutableArray<Client *>*_Nullable);
+/// A completion block for albums request
+typedef void (^RequestAlbumsBlock) (NSMutableArray<MusicAlbum *>*_Nullable);
 
-- (void)fetchDataWithBaseURL:(NSString*_Nullable) baseURL
-                  completion: (requestCompletionBlock _Nullable ) requestCompletionBlock;
+/// A completion block for tracks request
+typedef void (^RequestTracksBlock) (NSMutableArray<MusicTrack*>* _Nullable);
 
-- (void)fetchClientsWithCompletion: (requestClientsBlock _Nullable ) completion;
+/// A completion block for image request
+typedef void (^RequestImageBlock) (NSData* _Nullable);
+
+/**
+ Fetches generically data.
+ - parameter baseURL:
+ */
+- (void)fetchDataWithURL:(NSString* _Nullable) url
+                  completion: (RequestCompletionBlock _Nullable) requestCompletionBlock;
+
+- (void)fetchAlbumsWithCompletion: (RequestAlbumsBlock _Nullable) completion;
+
+- (void)fetchTracksWithAlbumID: (NSNumber* _Nonnull) albumID
+                   completion: (RequestTracksBlock _Nullable) completion;
+
+- (void)fetchImageWithURL:(NSString* _Nonnull) imageURL
+               completion:(RequestImageBlock _Nullable) completion;
 
 @end

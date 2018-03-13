@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "Client.h"
 #import "APIManager.h"
+#import "MusicAlbumTableViewCell.h"
+#import "DetailViewController.h"
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSMutableArray<Client*>* clients;
-
+@property (nonatomic, strong) NSMutableArray<MusicAlbum*>* albums;
+@property NSNumber* selectedRow;
 @end
 
