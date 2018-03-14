@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6440C42E205186830083D2B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6440C42D205186830083D2B6 /* AppDelegate.m */; };
-		6440C431205186830083D2B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6440C430205186830083D2B6 /* ViewController.m */; };
+		6440C431205186830083D2B6 /* AlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6440C430205186830083D2B6 /* AlbumsViewController.m */; };
 		6440C434205186830083D2B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6440C432205186830083D2B6 /* Main.storyboard */; };
 		6440C437205186830083D2B6 /* APITestObjC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6440C435205186830083D2B6 /* APITestObjC.xcdatamodeld */; };
 		6440C439205186830083D2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6440C438205186830083D2B6 /* Assets.xcassets */; };
@@ -26,8 +26,8 @@
 		6440C429205186830083D2B6 /* APITestObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APITestObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6440C42C205186830083D2B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6440C42D205186830083D2B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6440C42F205186830083D2B6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6440C430205186830083D2B6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6440C42F205186830083D2B6 /* AlbumsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumsViewController.h; sourceTree = "<group>"; };
+		6440C430205186830083D2B6 /* AlbumsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumsViewController.m; sourceTree = "<group>"; };
 		6440C433205186830083D2B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6440C436205186830083D2B6 /* APITestObjC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = APITestObjC.xcdatamodel; sourceTree = "<group>"; };
 		6440C438205186830083D2B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 		64AC77FA205872BA00532B4E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6440C42F205186830083D2B6 /* ViewController.h */,
-				6440C430205186830083D2B6 /* ViewController.m */,
+				6440C42F205186830083D2B6 /* AlbumsViewController.h */,
+				6440C430205186830083D2B6 /* AlbumsViewController.m */,
 				64AC77F12058698300532B4E /* DetailViewController.h */,
 				64AC77F22058698300532B4E /* DetailViewController.m */,
 			);
@@ -207,7 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6440C431205186830083D2B6 /* ViewController.m in Sources */,
+				6440C431205186830083D2B6 /* AlbumsViewController.m in Sources */,
 				64AC77EC2058531B00532B4E /* MusicAlbum.m in Sources */,
 				6440C437205186830083D2B6 /* APITestObjC.xcdatamodeld in Sources */,
 				64AC77F6205869D800532B4E /* MusicTrackTableViewCell.m in Sources */,

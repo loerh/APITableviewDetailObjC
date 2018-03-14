@@ -19,7 +19,7 @@
         <!--iTunes Albums-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="AlbumsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,18 +78,25 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="YfY-27-vjS"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="94Z-BR-fEk">
+                                <rect key="frame" x="169.5" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="94Z-BR-fEk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="35C-Ga-P7d"/>
                             <constraint firstItem="vJt-Uv-6Uk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qfm-js-v3w"/>
                             <constraint firstItem="vJt-Uv-6Uk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TUN-wY-CBW"/>
                             <constraint firstItem="vJt-Uv-6Uk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WcA-i8-7wa"/>
                             <constraint firstItem="vJt-Uv-6Uk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kN0-wB-Uaa"/>
+                            <constraint firstItem="94Z-BR-fEk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pMK-ci-R1H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="iTunes Albums" id="cBq-Bd-3w3"/>
                     <connections>
+                        <outlet property="albumsActivityIndicator" destination="94Z-BR-fEk" id="XQJ-Pm-1Xr"/>
                         <outlet property="albumsTableView" destination="vJt-Uv-6Uk" id="V1F-ZS-CY9"/>
                         <segue destination="Wlf-RX-Kmh" kind="show" identifier="detail" id="Fyc-wn-f2w"/>
                     </connections>

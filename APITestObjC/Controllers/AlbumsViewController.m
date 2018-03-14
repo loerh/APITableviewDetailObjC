@@ -6,16 +6,13 @@
 //  Copyright © 2018 Laurent Meert. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "AlbumsViewController.h"
 
-@interface ViewController ()
-
-/// The table view holding the 
-@property (weak, nonatomic) IBOutlet UITableView *albumsTableView;
+@interface AlbumsViewController ()
 
 @end
 
-@implementation ViewController
+@implementation AlbumsViewController
 
 int selectedRow;
 
@@ -35,9 +32,12 @@ int selectedRow;
         /// Replace albums with freshly fetched data
         self.albums = albums;
         
-        /// Reload tableview
         dispatch_async(dispatch_get_main_queue(), ^{
+            /// Reload tableview
             [self.albumsTableView reloadData];
+            
+            /// Hide activity indicator
+            [self.albumsActivityIndicator stopAnimating];
         });
         
     }];

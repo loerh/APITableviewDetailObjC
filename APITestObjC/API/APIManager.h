@@ -37,11 +37,25 @@ typedef void (^RequestImageBlock) (NSData* _Nullable);
 - (void)fetchDataWithURL:(NSString* _Nullable) url
                   completion: (RequestCompletionBlock _Nullable) requestCompletionBlock;
 
+/**
+ Fetches albums from API.
+ - parameter completion: A completion block that sends back the MusicAlbum data if the request was successful.
+ */
 - (void)fetchAlbumsWithCompletion: (RequestAlbumsBlock _Nullable) completion;
 
+/**
+ Fetches tracks from API.
+ - parameter albumID: The ID of the album to fetch.
+ - parameter completion: A completion block that sends back the MusicTrack data if the request was successful.
+ */
 - (void)fetchTracksWithAlbumID: (NSNumber* _Nonnull) albumID
                    completion: (RequestTracksBlock _Nullable) completion;
 
+/**
+ Fetches data from an image string URL.
+ - parameter imageURL: The NSString URL of the image.
+ - parameter completion: A completion block that sends back the MusicAlbum data if the request was successful.
+ */
 - (void)fetchImageWithURL:(NSString* _Nonnull) imageURL
                completion:(RequestImageBlock _Nullable) completion;
 

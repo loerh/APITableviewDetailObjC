@@ -15,7 +15,8 @@
     [self.artistNameLabel setText:musicAlbum.artistName];
     
     /// Clean image
-    [self.albumImageView setImage:nil];
+    [self.albumImageView setImage: nil];
+    [self.albumImageView setAlpha: 0];
     
     /// Image
     [[APIManager sharedInstance] fetchImageWithURL:musicAlbum.imageThumbnail completion:^(NSData* _Nullable data) {
@@ -25,6 +26,10 @@
         
         UIImage* image = [[UIImage alloc] initWithData: data];
         [self.albumImageView setImage: image];
+        
+        [UIView animateWithDuration:0.4 animations:^{
+            [self.albumImageView setAlpha: 1];
+        }];
     }];
 }
 

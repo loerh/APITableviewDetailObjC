@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ Holds metadata for an iTunes Music Album.
+ */
 @interface MusicAlbum : NSObject
 
 /// The album ID
